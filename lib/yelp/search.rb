@@ -12,6 +12,7 @@ class Yelp::Search < Yelp
     category_filter
     radius_filter
     claimed_filter
+    bounds
   )
 
   def find(params)
