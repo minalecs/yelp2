@@ -20,6 +20,10 @@ class Yelp
     @connection = OAuth::AccessToken.new(consumer, token, token_secret)
   end
 
+  def self.append_to_path(path, id)
+    "#{path}"<<"/#{id}"
+  end
+
   def self.build_query(path, opts)
     "#{path}?#{opts.map { |k,v| "#{k}=#{CGI.escape(v)}" }.join('&')}"
   end
