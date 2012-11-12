@@ -30,4 +30,5 @@ class Yelp
 end
 
 dir = Pathname(__FILE__).dirname.expand_path
-require dir + 'yelp/*'
+require dir + 'yelp/search'
+require dir + 'yelp/business'
